@@ -1,4 +1,4 @@
-# How to integrate Neuton model into your firmware project 
+# How to integrate Neuton into your firmware project 
 
 ##	Extract archive
 
