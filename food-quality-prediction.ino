@@ -169,6 +169,8 @@ void setup()
 	initialised = (0 == app_init());
 	initialised &= (0 == parser_init(channel_on_valid_packet, app_inputs_size()));
 
+  pinMode(sensor,INPUT);
+
 	Serial.begin(230400);
 }
 
@@ -186,6 +188,9 @@ void loop()
 			delay(100);
 		}
 	}
+
+  gas_value=digitalRead(sensor);
+  Serial.println(gas_value);
 
 	while (Serial.available() > 0)
 		parser_parse(Serial.read());
